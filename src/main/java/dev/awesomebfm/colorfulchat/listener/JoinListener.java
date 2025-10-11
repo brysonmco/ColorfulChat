@@ -17,9 +17,9 @@
 package dev.awesomebfm.colorfulchat.listener;
 
 import dev.awesomebfm.colorfulchat.ColorfulChat;
-import org.bukkit.ChatColor;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.persistence.PersistentDataContainer;
@@ -35,6 +35,7 @@ public class JoinListener implements Listener {
         this.instance = instance;
     }
 
+    @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
         PersistentDataContainer data = player.getPersistentDataContainer();
@@ -45,17 +46,12 @@ public class JoinListener implements Listener {
 
             // Inform player that they have access to the command
             if (player.hasPermission(CHANGE_COLOR_PERMISSION)) {
-                player.sendMessage(PREFIX +
-                        ChatColor.YELLOW + "Welcome to the server, this server is running " +
-                        ChatColor.translateAlternateColorCodes('&', "&cC&6o&el&ao&9r&5f&cu&6l&eC&ah&9a&5t") +
-                        ChatColor.YELLOW + " and you have access! Run " + ChatColor.GREEN + "/cc " + ChatColor.YELLOW + "to change your color!");
+                player.sendMessage(PREFIX + instance.getInfoMSG());
             }
 
             // Inform player that they have access to color codes
             if (player.hasPermission(COLOR_CODES_PERMISSION)) {
-                player.sendMessage(PREFIX +
-                        ChatColor.YELLOW + "You also are able to use color codes in chat! Use them like " +
-                        ChatColor.GREEN + "&b&lthis" + ChatColor.YELLOW + " to get " + ChatColor.AQUA + "" + ChatColor.BOLD + "this" + ChatColor.YELLOW + "!");
+                player.sendMessage(PREFIX + instance.getPermissionMSG());
             }
         }
     }
