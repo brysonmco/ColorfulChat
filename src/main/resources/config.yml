@@ -2,3 +2,9 @@ default-color: 'GRAY'
 
 # On startup the plugin will check Modrinth for updates and inform you via the console if updates are available.
 enable-update-checker: true
+
+# Shows the first time a player joins the server
+info-message: '&r&eWelcome to the server, this server is running &cC&6o&el&ao&9r&5f&cu&6l&eC&ah&9a&5t &r&eand you have access! Run &a/cc &eto change your color!'
+
+# Shows the first time a player joins the server if they have the colorfulchat.change permission
+color-permission-message: '&r&eYou also are able to use color codes in chat! Use them like \&a\&b\&lthis &eto get &b&lthis&e!'
