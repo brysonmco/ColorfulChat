@@ -43,7 +43,11 @@ public final class ColorfulChat extends JavaPlugin {
 
         // Load config
         saveDefaultConfig();
-        defaultColor = ChatColor.valueOf(getConfig().getString("default-color"));
+        try {
+            defaultColor = ChatColor.valueOf(getConfig().getString("default-color"));
+        } catch (IllegalArgumentException e) {
+            defaultColor = null;
+        }
         infoMsg = getConfig().getString("info-message");
         permissionMsg = getConfig().getString("color-permission-message");
 
