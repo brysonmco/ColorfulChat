@@ -41,7 +41,12 @@ public final class ColorfulChat extends JavaPlugin {
 
         // Load config
         saveDefaultConfig();
-        defaultColor = ChatColor.valueOf(getConfig().getString("default-color"));
+        try {
+            defaultColor = ChatColor.valueOf(getConfig().getString("default-color"));
+        } catch (IllegalArgumentException e) {
+            defaultColor = null;
+        }
+
 
         // Setup menu manager
         new InventoryAPI(instance).init();
