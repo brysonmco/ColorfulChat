@@ -17,6 +17,7 @@
 package dev.awesomebfm.colorfulchat.listener;
 
 import dev.awesomebfm.colorfulchat.ColorfulChat;
+import org.bukkit.ChatColor;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -45,13 +46,13 @@ public class JoinListener implements Listener {
             data.set(key, PersistentDataType.STRING, instance.getDefaultColor().toString());
 
             // Inform player that they have access to the command
-            if (player.hasPermission(CHANGE_COLOR_PERMISSION)) {
-                player.sendMessage(PREFIX + instance.getInfoMSG());
+            if (player.hasPermission(CHANGE_COLOR_PERMISSION) && !instance.getInfoMsg().isEmpty()) {
+                player.sendMessage(PREFIX + ChatColor.translateAlternateColorCodes('&', instance.getInfoMsg()));
             }
 
             // Inform player that they have access to color codes
-            if (player.hasPermission(COLOR_CODES_PERMISSION)) {
-                player.sendMessage(PREFIX + instance.getPermissionMSG());
+            if (player.hasPermission(COLOR_CODES_PERMISSION) && !instance.getPermissionMsg().isEmpty()) {
+                player.sendMessage(PREFIX + ChatColor.translateAlternateColorCodes('&', instance.getPermissionMsg()));
             }
         }
     }

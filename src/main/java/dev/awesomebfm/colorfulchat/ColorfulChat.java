@@ -32,8 +32,8 @@ public final class ColorfulChat extends JavaPlugin {
     private static final String PREFIX = ChatColor.translateAlternateColorCodes('&', "&8[&cC&6o&el&ao&9r&5f&cu&6l&eC&ah&9a&5t&8] ");
 
     private ChatColor defaultColor;
-    private String infoMSG;
-    private String permissionMSG;
+    private String infoMsg;
+    private String permissionMsg;
 
     private static ColorfulChat instance;
 
@@ -44,8 +44,8 @@ public final class ColorfulChat extends JavaPlugin {
         // Load config
         saveDefaultConfig();
         defaultColor = ChatColor.valueOf(getConfig().getString("default-color"));
-        infoMSG = getConfig().getString("info-message");
-        permissionMSG = getConfig().getString("color-permission-message");
+        infoMsg = getConfig().getString("info-message");
+        permissionMsg = getConfig().getString("color-permission-message");
 
         // Setup menu manager
         new InventoryAPI(instance).init();
@@ -87,12 +87,12 @@ public final class ColorfulChat extends JavaPlugin {
         return defaultColor;
     }
 
-    public String getInfoMSG() {
-        return infoMSG;
+    public String getInfoMsg() {
+        return infoMsg;
     }
 
-    public String getPermissionMSG() {
-        return permissionMSG;
+    public String getPermissionMsg() {
+        return permissionMsg;
     }
 
     public static ColorfulChat getInstance() {
