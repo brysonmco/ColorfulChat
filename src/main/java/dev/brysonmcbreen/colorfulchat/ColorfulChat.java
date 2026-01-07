@@ -1,5 +1,5 @@
 /*
-   Copyright 2024 AwesomeBFM
+   Copyright 2026 Bryson McBreen
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,11 +14,11 @@
    limitations under the License.
  */
 
-package dev.awesomebfm.colorfulchat;
+package dev.brysonmcbreen.colorfulchat;
 
-import dev.awesomebfm.colorfulchat.command.ChatColorCommand;
-import dev.awesomebfm.colorfulchat.listener.ChatListener;
-import dev.awesomebfm.colorfulchat.listener.JoinListener;
+import dev.brysonmcbreen.colorfulchat.command.ChatColorCommand;
+import dev.brysonmcbreen.colorfulchat.listener.ChatListener;
+import dev.brysonmcbreen.colorfulchat.listener.JoinListener;
 import mc.obliviate.inventory.InventoryAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -61,7 +61,7 @@ public final class ColorfulChat extends JavaPlugin {
         // Register commands
         PluginCommand command = getCommand("chatcolor");
         if (command == null) {
-            Bukkit.getLogger().severe("Could not load commands! Please report at https://github.com/AwesomeBFM/ColorfulChat/issues");
+            Bukkit.getLogger().severe("Could not load commands! Please report at https://github.com/brysonmco/ColorfulChat/issues");
             return;
         }
         command.setExecutor(new ChatColorCommand(this));

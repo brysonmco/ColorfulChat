@@ -1,8 +1,8 @@
 name: ColorfulChat
 version: '${project.version}'
-main: dev.awesomebfm.colorfulchat.ColorfulChat
+main: dev.brysonmcbreen.colorfulchat.ColorfulChat
 api-version: 1.20
-authors: [ AwesomeBFM ]
+authors: [ Bryson McBreen ]
 description: Minecraft Spigot plugin that allows players to set their chat color!
 permissions:
   colorfulchat.change:

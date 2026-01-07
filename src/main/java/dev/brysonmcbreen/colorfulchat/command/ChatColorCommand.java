@@ -1,5 +1,5 @@
 /*
-   Copyright 2024 AwesomeBFM
+   Copyright 2026 Bryson McBreen
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,10 +14,10 @@
    limitations under the License.
  */
 
-package dev.awesomebfm.colorfulchat.command;
+package dev.brysonmcbreen.colorfulchat.command;
 
-import dev.awesomebfm.colorfulchat.ColorfulChat;
-import dev.awesomebfm.colorfulchat.menu.ColorGui;
+import dev.brysonmcbreen.colorfulchat.ColorfulChat;
+import dev.brysonmcbreen.colorfulchat.menu.ColorGui;
 import org.bukkit.ChatColor;
 import org.bukkit.NamespacedKey;
 import org.bukkit.command.Command;
