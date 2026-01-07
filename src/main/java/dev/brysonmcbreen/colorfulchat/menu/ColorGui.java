@@ -253,9 +253,7 @@ public class ColorGui extends Gui {
         addItem(31, new Icon(Material.BARRIER).setName(ChatColor.RED + "Close Menu").setLore(List.of(
                 "",
                 ChatColor.YELLOW + "Click to close the menu!"
-        )).onClick(e -> {
-            e.getWhoClicked().closeInventory();
-        }));
+        )).onClick(e -> e.getWhoClicked().closeInventory()));
     }
 
 }
